@@ -18,10 +18,10 @@ Both Windows and Mac have default security settings that will prevent execution 
 
 **Note for users of macOS 10.12.x and above** : There is an known issue on macOS Sierra and Java about the slowness of   java.net.InetAddress getLocalHost() which results in a slowness of the Bonita Studio (find more info on [thoeni](https://thoeni.io/post/macos-sierra-java/) or [plumbr](https://plumbr.eu/blog/java/macos-sierra-problems-with-java-net-inetaddress-getlocalhost)). To resolve this issue you shoud add your computer name to your /etc/hosts file : In a terminal, edit your `/etc/hosts` with sudo privilege, add your computer name to the local IP addresses `127.0.0.1 localhost <mycomputername.local>` and `::1 localhost <mycomputername.local>` (To find your macOS computer name, look at [Apple support dedicated page](https://support.apple.com/kb/PH25076)).
 
-**Note for users of OS X 10.12.x and above using Zip installation** : a new security feature has been added in MacOS Sierra about the _App Translocation_ prevents the launch of software that is not officially signed by Apple (see [Apple official site](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1) and [other dedicated site](https://eclecticlight.co/2016/06/16/macos-sierra-will-break-many-installers-and-updaters/)).   
+**Note for users of OS X 10.12.x and above using Zip installation** : a new security feature has been added in MacOS Sierra about the _App Translocation_ prevents the launch of software that is not officially signed by Apple (see [Apple official site](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1) and [other dedicated site](https://eclecticlight.co/2016/06/16/macos-sierra-will-break-many-installers-and-updaters/)).
 In order to launch Bonita BPM Studio on a system running on MacOS Sierra or above, you must apply extended attributs manually: In a terminal, run `xattr -rc BonitaBPMCommunity.app` for Community edition, or `xattr -rc BonitaBPMSubscription.app` for Subscription edition.
 
-**Note for users of OS X 10.7.5 and above**: a new security feature called **Gatekeeper** prevents the installation of software that is not officially recognized by Apple.  
+**Note for users of OS X 10.7.5 and above**: a new security feature called **Gatekeeper** prevents the installation of software that is not officially recognized by Apple.
 For more information and details of how to install Bonita BPM Studio on a system running Gatekeeper, see the [Apple support site](https://support.apple.com/en-us/HT202491).
 
 **Not for users of Windows 10**: the security feature called **SmartScreen** prevents execution of Bonita BPM Studio installer.  When you get the "Windows protect your PC" pop up window, click on "More info" link and click on "Run anyway" button.
@@ -40,7 +40,7 @@ When the download is complete, you have one of the following new files:
 **Linux**  
 Community edition  
 - 32 bit: `BonitaBPMCommunity-x.y.z-x86.run`
-- 64 bit: `BonitaBPMCommunity-x.y.z-x86_64.run`  
+- 64 bit: `BonitaBPMCommunity-x.y.z-x86_64.run`
 
 Subscription editions   
 - 32 bit: `BonitaBPMSubscription-x.y.z-x86.run`
@@ -49,7 +49,7 @@ Subscription editions
 **Windows**  
 Community edition  
 - 32 bit: `BonitaBPMCommunity-x..zy-x86.exe`
-- 64 bit: `BonitaBPMCommunity-x.y.z-x86_64.exe`  
+- 64 bit: `BonitaBPMCommunity-x.y.z-x86_64.exe`
 
 Subscription editions  
 - 32 bit: `BonitaBPMSubscription-x..zy-x86.exe`
@@ -58,15 +58,15 @@ Subscription editions
 **Mac**  
 Community edition  
 - 32 bit: `Not provided`
-- 64 bit: `BonitaBPMCommunity-x.y.z-x86_64.dmg`  
+- 64 bit: `BonitaBPMCommunity-x.y.z-x86_64.dmg`
 
 Subscription editions  
 - 32 bit: `Not provided`
 - 64 bit: `BonitaBPMSubscription-x.y.z-x86_64.dmg`
 
-**All**  
+**All**
 Community edition  
-- `BonitaBPMCommunity-x.y.z.zip`  
+- `BonitaBPMCommunity-x.y.z.zip`
 
 Subscription editions  
 - `BonitaBPMSubscription-x.y.z.zip`
@@ -78,7 +78,7 @@ To run the installer wizard for Linux, Windows, or Mac, double-click the downloa
 Then follow the installation wizard through to the end of the installation procedure.
 
 For subscription editions: the installer import workspace feature applies only to local repositories.  
-If you have shared repositories in your workspace, you will need to reconnect to these manually, and possibly migrate the processes to your new version of Bonita BPM Studio.  
+If you have shared repositories in your workspace, you will need to reconnect to these manually, and possibly migrate the processes to your new version of Bonita BPM Studio.
 The default workspace is automatically initialized at the end of the installation.
 
 ## Install using OS-independent archive
@@ -92,7 +92,7 @@ To start Bonita BPM Studio, go to the directory where you installed it, and run 
 **Linux**   
 Community edition  
 - 32-bit: `BonitaBPMCommunity-linux`
-- 64-bit: `BonitaBPMCommunity64-linux`  
+- 64-bit: `BonitaBPMCommunity64-linux`
 
 Subscription editions  
 - 32-bit: `BonitaBPMSubscription-linux`
@@ -139,9 +139,10 @@ Studio log file can be displayed from Bonita BPM Studio in "Help" -\> "Show Boni
 If Studio fails to start, you can open the log file manually. File is named `.log` and is located in `<studio_folder>/workspace/.metadata` folder.   
 Note that folder might be hidden and file might not be displayed if you choose to hide file extensions in your file manager.
 
+
 #### OutOfMemory error in Bonita BPM Studio
 
-After installation, you might see an `OutOfMemory` error in Bonita BPM Studio.  
+After installation, you might see an `OutOfMemory` error in Bonita BPM Studio.
 This error sometimes occurs when importing a large process definition.  
 The log messages are similar to the following:
 
@@ -161,3 +162,17 @@ To fix this issue, you need to increase the memory allocated to the JVM that run
 Edit the `*.ini` file that corresponds to the executable you use to launch the Studio (e.g. `BonitaBPMSubscription64.ini` if you run BonitaBPMSubscription64.exe) and modify this line: `-Xmx512m` to `-Xmx1024m` (or higher).
 
 Then restart Bonita BPM Studio.
+
+
+#### Bonita Studio Welcome page stays blank on Linux (Ubuntu/Debian)
+
+If the Welcome page displays fully white when you start-up your Bonita Studio:
+![KO](images/studio_welcome_page_ko.png)
+
+just install the missing packet libwebkitgtk by running the following command:
+```shell
+sudo apt-get install libwebkitgtk-1.0-0
+```
+
+Then the welcome page should display well, like this:
+![Ok](images/studio_welcome_page_ok.png)
